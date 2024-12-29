@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(222, 26%, 31%);
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  font-family: 'League Spartan', sans-serif;
+}
+
+/* Body Active states */
+body.theme--2 {
+  background-color: hsl(0, 0%, 90%);
+}
+
+body.theme--3 {
+  background-color: hsl(268, 75%, 9%);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex--col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Main */
+main {
+  width: max-content;
+  height: 100%;
+  gap: 15px;
+}
+
+/* Calculatior Head section */
+.calculator--head {
+  color: #fff;
+  min-height: 10vh;
+  gap: 10rem;
+}
+
+.calculator--head.calculator--head--theme--2 {
+  color: hsl(60, 10%, 19%);
+}
+
+.calculator--head.calculator--head--theme--3 {
+  color: hsl(52, 100%, 62%);
+}
+
+/* Toggle Bar Section */
+.toggle--bar--container {
+  gap: 2rem;
+  min-height: 4rem;
+  position: relative;
+}
+
+.toggle--bar--container > h4,
+.toggle--bar--text {
+  font-size: x-small;
+}
+
+.toggle--bar--text {
+  position: absolute;
+  gap: 1rem;
+  top: 5px;
+  right: 0.3rem;
+}
+
+.toggle--bar {
+  background-color: hsl(223, 31%, 20%);
+  cursor: pointer;
+  border-radius: 15px;
+  width: 3.5rem;
+  min-height: 18px;
+  position: relative;
+}
+
+.toggle--bar.toggle--theme--2 {
+  background-color: hsl(0, 5%, 81%);
+}
+
+.toggle--bar.toggle--theme--3 {
+  background-color: hsl(268, 71%, 12%);
+}
+
+.toggle--bar > div {
+  position: absolute;
+  left: 4px;
+  top: 3px;
+  width: 12px;
+  aspect-ratio: 1;
+  background-color: hsl(6, 63%, 50%);
+  border-radius: 50%;
+  transition-property: position;
+  transition: 0.2s ease-in-out;
+}
+
+.toggle--bar > div:hover {
+  background-color: hsl(6, 71%, 61%);
+}
+
+/* Toggle Bar Active States */
+.toggle--bar > div.active--2 {
+  left: 1.3rem;
+  background-color: hsl(25, 98%, 40%);
+}
+
+.toggle--bar > div.active--2:hover {
+  background-color: hsl(25, 72%, 52%);
+}
+
+.toggle--bar > div.active--3 {
+  left: 2.6rem;
+  background-color: hsl(176, 100%, 44%);
+}
+
+.toggle--bar > div.active--3:hover {
+  background-color: hsl(176, 87%, 65%);
+}
+
+/* Display Screen */
+.display--result {
+  background-color: hsl(224, 36%, 15%);
+  border-radius: 5px;
+  color: #fff;
+  min-height: 10vh;
+  justify-content: flex-end;
+  padding: 15px 5%;
+}
+
+.display--result.display--result--theme--2 {
+  background-color: hsl(0, 0%, 93%);
+  color: hsl(60, 10%, 19%);
+}
+
+.display--result.display--result--theme--3 {
+  background-color: hsl(268, 71%, 12%);
+  color: hsl(52, 100%, 62%);
+}
+
+/* Text Input Container */
+.text--input--container {
+  background-color: hsl(223, 31%, 20%);
+  border-radius: 5px;
+  padding: 15px 15px 0 15px;
+}
+
+.text--input--container.text--input--container--theme--2 {
+  background-color: hsl(0, 5%, 81%);
+}
+
+.text--input--container.text--input--container--theme--3 {
+  background-color: hsl(268, 71%, 12%);
+}
+
+.text--input--container > div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(2.5rem, auto);
+  column-gap: 15px;
+  margin-bottom: 15px;
+}
+
+.text--input--container > div:last-child {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Keypads */
+.text--input--container > div > div {
+  cursor: pointer;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.keypad--btn {
+  background-color: hsl(30, 25%, 89%);
+  box-shadow: 0px 2px hsl(28, 16%, 65%);
+  color: hsl(221, 14%, 31%);
+}
+
+.keypad--btn:hover {
+  background-color: #fff;
+}
+
+.keypad--btn.keypad--theme--2 {
+  background-color: hsl(45, 7%, 89%);
+  box-shadow: 0px 2px hsl(35, 11%, 61%);
+  color: hsl(60, 10%, 19%);
+}
+
+.keypad--btn.keypad--theme--2:hover {
+  background-color: #fff;
+}
+
+.keypad--btn.keypad--theme--3 {
+  background-color: hsl(268, 47%, 21%);
+  box-shadow: 0px 2px hsl(290, 70%, 36%);
+  color: hsl(52, 100%, 62%);
+}
+
+.keypad--btn.keypad--theme--3:hover {
+  background-color: hsl(268, 76%, 59%);
+}
+
+/* Equal To Button */
+.text--input--container > div:last-child > div:last-child {
+  background-color: hsl(6, 63%, 50%);
+  box-shadow: 0px 2px hsl(6, 70%, 34%);
+  color: #fff;
+}
+
+.text--input--container > div:last-child > div:last-child.equalto--theme--2 {
+  background-color: hsl(25, 98%, 40%);
+  box-shadow: 0px 2px hsl(25, 99%, 27%);
+}
+
+.text--input--container > div:last-child > div:last-child.equalto--theme--3 {
+  background-color: hsl(176, 100%, 44%);
+  box-shadow: 0px 2px hsl(177, 92%, 70%);
+}
+
+/* Delete And Reset Buttons */
+.reset,
+.delete {
+  background-color: hsl(225, 21%, 49%);
+  box-shadow: 0px 2px hsl(224, 28%, 35%);
+  color: #fff;
+}
+
+.reset.reset--theme--2,
+.delete.delete--theme--2 {
+  background-color: hsl(185, 42%, 37%);
+  box-shadow: 0px 2px hsl(185, 58%, 25%);
+}
+
+.reset.reset--theme--3,
+.delete.delete--theme--3 {
+  background-color: hsl(281, 89%, 26%);
+  box-shadow: 0px 2px hsl(285, 91%, 52%);
+}
+
+/* Equal To Button Hover State */
+.text--input--container > div:last-child > div:last-child:hover {
+  background-color: hsl(6, 71%, 61%);
+}
+
+.text--input--container
+  > div:last-child
+  > div:last-child.equalto--theme--2:hover {
+  background-color: hsl(25, 72%, 52%);
+}
+
+.text--input--container
+  > div:last-child
+  > div:last-child.equalto--theme--3:hover {
+  background-color: hsl(176, 87%, 65%);
+}
+
+/*Delete And Reset Buttons  Hover States */
+
+.reset:hover,
+.delete:hover {
+  background-color: hsl(224, 38%, 72%);
+}
+
+.reset.reset--theme--2:hover,
+.delete.delete--theme--2:hover {
+  background-color: hsl(185, 43%, 51%);
+}
+
+.delete.delete--theme--3:hover {
+  background-color: hsl(281, 32%, 45%);
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+  main {
+    width: 90%;
+    height: unset;
+  }
+
+  .toggle--bar--container > h4 {
+    font-size: medium;
+  }
+
+  .calculator--head {
+    gap: unset;
+    justify-content: space-between;
+  }
+
+  .calculator--head > h3 {
+    font-size: x-large;
+  }
+
+  .text--input--container > div {
+    grid-auto-rows: minmax(3.5rem, auto);
+  }
+
+  .text--input--container > div > div {
+    font-size: large;
+  }
+
+  .display--result--text {
+    font-size: xx-large;
+  }
+}
